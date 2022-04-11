@@ -9,15 +9,28 @@ import UIKit
 
 class MargaritaCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet var margaritaImage: UIImageView!
+    @IBOutlet var nameOfMargaritaLabel: UILabel!
+    @IBOutlet var typeOfCoctailLabel: UILabel!
+    
+    
+    func configure(with cocktail: Cocktail) {
+        
+        nameOfMargaritaLabel.text = cocktail.strDrink
+        typeOfCoctailLabel.text = cocktail.strAlcoholic
+        
+        guard let url = URL(string: cocktail.strDrinkThumb  ?? "") else { return }
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data else {
+                print(error?.localizedDescription ?? "No error description")
+                return
+            }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+            DispatchQueue.main.async {
+                self.margaritaImage.image = UIImage(data: data)
+                self.margaritaImage.layer.cornerRadius = self.margaritaImage.frame.height / 2
+            }
+        }.resume()
     }
 
 }

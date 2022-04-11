@@ -52,6 +52,11 @@
                                         <constraint firstItem="96h-vt-g9a" firstAttribute="leading" secondItem="0nM-ng-3pE" secondAttribute="trailing" constant="22" id="n9U-iJ-3UX"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="margaritaImage" destination="0nM-ng-3pE" id="Got-Sq-Gz2"/>
+                                    <outlet property="nameOfMargaritaLabel" destination="96h-vt-g9a" id="3aE-53-OeN"/>
+                                    <outlet property="typeOfCoctailLabel" destination="dQH-NS-9ca" id="ewq-Ce-mNC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
