@@ -9,8 +9,8 @@ import UIKit
 
 class MargaritaCell: UITableViewCell {
 
-    @IBOutlet var margaritaImage: UIImageView!
     @IBOutlet var nameOfMargaritaLabel: UILabel!
+    @IBOutlet var margaritaImage: UIImageView!
     @IBOutlet var typeOfCoctailLabel: UILabel!
     
     
