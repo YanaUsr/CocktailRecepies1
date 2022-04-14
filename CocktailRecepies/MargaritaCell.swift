@@ -28,7 +28,7 @@ class MargaritaCell: UITableViewCell {
 
             DispatchQueue.main.async {
                 self.margaritaImage.image = UIImage(data: data)
-                self.margaritaImage.layer.cornerRadius = self.margaritaImage.frame.height / 2
+                
             }
         }.resume()
     }
