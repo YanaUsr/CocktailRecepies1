@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Margarits-->
+        <!--Margaritas-->
         <scene sceneID="fYO-5Z-sWS">
             <objects>
                 <tableViewController id="5Bc-ve-Mdc" customClass="TableViewController" customModule="CocktailRecepies" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,7 +67,7 @@
                             <outlet property="delegate" destination="5Bc-ve-Mdc" id="DeX-Cq-4i4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Margarits" id="qKs-sJ-2gQ"/>
+                    <navigationItem key="navigationItem" title="Margaritas" id="qKs-sJ-2gQ"/>
                     <connections>
                         <segue destination="J9T-88-77r" kind="show" identifier="toTheRecipe" id="BiH-Hx-Jpb"/>
                     </connections>

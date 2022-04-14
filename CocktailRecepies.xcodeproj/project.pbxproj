@@ -43,6 +43,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		234C824D28086AFC005D4547 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23557D172804D9210067CF02 /* TableViewController.swift */,
+				23FDEACC2808315500D07DF4 /* DetailedInformation.swift */,
+				23557D1C2804DB860067CF02 /* MargaritaCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		234C824E28086B11005D4547 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23557D192804DA540067CF02 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		234C824F28086B28005D4547 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				23557D032804D8BB0067CF02 /* AppDelegate.swift */,
+				23557D052804D8BB0067CF02 /* SceneDelegate.swift */,
+				23557D112804D8BC0067CF02 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		234C825028086B4D005D4547 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				23557D0E2804D8BC0067CF02 /* LaunchScreen.storyboard */,
+				23557D092804D8BB0067CF02 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 		23557CF72804D8BB0067CF02 = {
 			isa = PBXGroup;
 			children = (
@@ -62,26 +99,13 @@
 		23557D022804D8BB0067CF02 /* CocktailRecepies */ = {
 			isa = PBXGroup;
 			children = (
-				23557D1B2804DB640067CF02 /* New Group */,
-				23557D032804D8BB0067CF02 /* AppDelegate.swift */,
-				23557D052804D8BB0067CF02 /* SceneDelegate.swift */,
-				23557D172804D9210067CF02 /* TableViewController.swift */,
-				23FDEACC2808315500D07DF4 /* DetailedInformation.swift */,
-				23557D192804DA540067CF02 /* Model.swift */,
-				23557D1C2804DB860067CF02 /* MargaritaCell.swift */,
-				23557D092804D8BB0067CF02 /* Main.storyboard */,
-				23557D112804D8BC0067CF02 /* Info.plist */,
+				234C825028086B4D005D4547 /* StoryBoards */,
+				234C824F28086B28005D4547 /* App */,
+				234C824E28086B11005D4547 /* Model */,
+				234C824D28086AFC005D4547 /* ViewControllers */,
 				23557D0C2804D8BC0067CF02 /* Assets.xcassets */,
-				23557D0E2804D8BC0067CF02 /* LaunchScreen.storyboard */,
 			);
 			path = CocktailRecepies;
-			sourceTree = "<group>";
-		};
-		23557D1B2804DB640067CF02 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,7 +335,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9QPM2LT848;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CocktailRecepies/Info.plist;
+				INFOPLIST_FILE = CocktailRecepies/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -340,7 +364,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9QPM2LT848;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CocktailRecepies/Info.plist;
+				INFOPLIST_FILE = CocktailRecepies/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
