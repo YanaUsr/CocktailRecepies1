@@ -9,21 +9,37 @@ import UIKit
 
 class DetailedInformation: UIViewController {
 
+    @IBOutlet var imageMargarita: UIImageView!
+    @IBOutlet var recepyLabel: UILabel!
+    @IBOutlet var ingridientsLabel: UILabel!
+    
+    var cocktail: Cocktail?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
 
-        // Do any additional setup after loading the view.
     }
     
+    
+    func configure() {
+        
+        recepyLabel.text = cocktail?.strInstructions
+        ingridientsLabel.text = cocktail?.composition
+        
+        
+        guard let url = URL(string: cocktail?.strDrinkThumb  ?? "") else { return }
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data else {
+                print(error?.localizedDescription ?? "No error description")
+                return
+            }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            DispatchQueue.main.async {
+                self.imageMargarita.image = UIImage(data: data)
+                
+            }
+        }.resume()
     }
-    */
-
+    
 }

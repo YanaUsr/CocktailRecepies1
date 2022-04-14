@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="566.35514018691583" y="212.52699784017281"/>
         </scene>
-        <!--Back-->
+        <!--Detailed Information-->
         <scene sceneID="xSA-rQ-1Cp">
             <objects>
-                <viewController id="J9T-88-77r" customClass="DetailedInformation" sceneMemberID="viewController">
+                <viewController id="J9T-88-77r" customClass="DetailedInformation" customModule="CocktailRecepies" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cy8-8v-YgW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,19 +96,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01l-D5-a7b">
+                                <rect key="frame" x="57" y="324.5" width="206" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cGj-BE-2TV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cGj-BE-2TV" firstAttribute="trailing" secondItem="01l-D5-a7b" secondAttribute="trailing" constant="57" id="7g1-bp-mqM"/>
                             <constraint firstItem="cGj-BE-2TV" firstAttribute="trailing" secondItem="dfI-iY-Nlx" secondAttribute="trailing" constant="57" id="KUS-dv-Ty7"/>
                             <constraint firstItem="Jna-Qs-pt9" firstAttribute="leading" secondItem="cGj-BE-2TV" secondAttribute="leading" constant="57" id="Ls5-p8-coo"/>
+                            <constraint firstItem="01l-D5-a7b" firstAttribute="leading" secondItem="cGj-BE-2TV" secondAttribute="leading" constant="57" id="MIE-sb-B02"/>
                             <constraint firstItem="cGj-BE-2TV" firstAttribute="trailing" secondItem="Jna-Qs-pt9" secondAttribute="trailing" constant="57" id="PRQ-PP-ky2"/>
+                            <constraint firstItem="dfI-iY-Nlx" firstAttribute="centerX" secondItem="cGj-BE-2TV" secondAttribute="centerX" id="Qsd-M2-XEG"/>
                             <constraint firstItem="dfI-iY-Nlx" firstAttribute="top" secondItem="cGj-BE-2TV" secondAttribute="top" constant="20" id="bAm-hA-NtO"/>
                             <constraint firstItem="Jna-Qs-pt9" firstAttribute="top" secondItem="dfI-iY-Nlx" secondAttribute="bottom" constant="20" id="eKW-U9-abZ"/>
+                            <constraint firstItem="01l-D5-a7b" firstAttribute="top" secondItem="Jna-Qs-pt9" secondAttribute="bottom" constant="20" id="fpr-ds-Udu"/>
                             <constraint firstItem="dfI-iY-Nlx" firstAttribute="leading" secondItem="cGj-BE-2TV" secondAttribute="leading" constant="57" id="tQN-0L-pcT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Back" id="dXC-we-jj5"/>
+                    <navigationItem key="navigationItem" id="dXC-we-jj5"/>
+                    <connections>
+                        <outlet property="imageMargarita" destination="dfI-iY-Nlx" id="4f6-gY-RYE"/>
+                        <outlet property="ingridientsLabel" destination="01l-D5-a7b" id="Zjh-qg-miQ"/>
+                        <outlet property="recepyLabel" destination="Jna-Qs-pt9" id="MWK-sJ-bBc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIt-ot-13R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

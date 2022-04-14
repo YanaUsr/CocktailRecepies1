@@ -39,6 +39,17 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cocktails = cocktails[indexPath.row]
+        performSegue(withIdentifier: "toTheRecipe", sender: cocktails)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedCocktailVC = segue.destination as? DetailedInformation else { return }
+        selectedCocktailVC.cocktail = sender as? Cocktail
+        
+    }
+    
 }
 
 extension TableViewController {

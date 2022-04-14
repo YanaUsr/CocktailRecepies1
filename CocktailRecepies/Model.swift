@@ -28,6 +28,34 @@ struct Cocktail: Decodable {
     let strIngredient13: String?
     let strIngredient14: String?
     let strIngredient15: String?
+
+    var composition: String {
+        var compositionInStringFormat = "Ingredients:\n"
+        let allIngredients = [
+            strIngredient1,
+            strIngredient2,
+            strIngredient3,
+            strIngredient4,
+            strIngredient5,
+            strIngredient6,
+            strIngredient7,
+            strIngredient8,
+            strIngredient9,
+            strIngredient10,
+            strIngredient11,
+            strIngredient12,
+            strIngredient13,
+            strIngredient14,
+            strIngredient15
+        ]
+
+        for ingredient in allIngredients {
+            if let ingredient = ingredient {
+                compositionInStringFormat += "\(ingredient)\n"
+            }
+        }
+        return compositionInStringFormat
+    }
     
 }
 
